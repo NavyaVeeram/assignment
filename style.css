@@ -1,0 +1,80 @@
+
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .profile-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  .custom-line-height {
+    line-height: 100px;
+  }
+  .custom-hr {
+    height: 100px; /* Set the desired height */
+    width: 5px; /* Set the desired width */
+    background-color: #8c2fc9; /* Set the desired background color */
+
+  }
+  .icons i{
+    font-size: 30px;
+    display: block;
+  }
+  /* Custom styles for the chart container */
+.chart-container {
+    width: 80%;
+    margin: auto;
+  }
+  .grey{
+    background-color: #ccc;
+  }
+  @media (max-width: 768px) {
+    .grey{
+      background-color: transparent;
+    }
+  }
+  @media (max-width: 576px) {
+    .grey{
+      background-color: transparent;
+    }
+  }
+  @media (max-width: 768px) {
+  .greys{
+    background-color:  #f3f3f3;
+    text-align: center;
+    padding:50px;
+    border-radius: 50px;
+  }
+  .greys button{
+    text-align: center;
+    width: 80%;
+    margin-bottom: 10px;
+
+  }
+}
+@media (max-width: 576px) {
+  .greys{
+    background-color: #f3f3f3;
+    text-align: center;
+    padding:10px;
+  }
+}
+  @media (max-width: 768px) {
+      .fixed-bottom-icons {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: white; /* Adjust as needed */
+        z-index: 1000; /* Adjust as needed */
+        border-top: 1px solid #ccc; /* Add a border if needed */
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
