@@ -30,7 +30,7 @@
     margin: auto;
   }
   .grey{
-    background-color: #ccc;
+    background-color: #f3f3f3;
   }
   @media (max-width: 768px) {
     .grey{
@@ -77,4 +77,19 @@
         justify-content: space-around;
         align-items: center;
     }
+}
+.btn{
+  background-color: rgb(123, 86, 209); 
+  color: white;
+}
+hr{
+  color: rgb(123, 86, 209);
+  width:90px;
+  height:2px;
+  text-align: center;
+}
+p{
+  color:grey;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
