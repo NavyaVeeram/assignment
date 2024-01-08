@@ -23,7 +23,14 @@
   .icons i{
     font-size: 30px;
     display: block;
+    color: grey;
+    font-size: 30px;
   }
+.icons i:hover{
+  color: white;
+  background-color: #4f28d1;
+  border-radius: 5px;
+}
   /* Custom styles for the chart container */
 .chart-container {
     width: 80%;
@@ -65,10 +72,6 @@
     text-align: center;
     padding:10px;
   }
-}
-.fixed-bottom-icons i:hover{
-background-color: #4f28d1;
-color: white;
 }
 
 .btn{
@@ -113,22 +116,24 @@ p{
   background: white;
 }
 .bell{
-  color: #000;
+  color: #968c8c;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 767px){
   .bell{
-  position: fixed;
-   top:20px;
-   right:20px;
+    position: fixed;
+    top:20px;
+    right: 20px;
+    width:70px;
   }
+}
+@media screen and (max-width: 576px){
+  .bell{
+    position: fixed;
+    top:20px;
+    right: 20px;
+    width:70px;
   }
-  @media (max-width: 576px) {
- .bell{
-  position: fixed;
-  top:10px;
-  right:10px;
-  }
-  }
+}
   /* Default styles for larger screens */
 .round {
   width: 25%;
@@ -200,13 +205,72 @@ display: none;
     display: none;
   }
   }
-/* For Firefox */
-input[type="range"]::-moz-range-progress {
+/*For Firefox */
+ input[type="range"]::-moz-range-progress {
   background: #4f28d1;
 }
 
 input[type="range"]::-moz-range-thumb {
   background: #f3f3f3;
   border: 1px solid #3498db;
+
+}
+
+.bi-bell-fill {
+  position: relative;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px; /* Adjust the size of the dot as needed */
+  height: 8px;
+  background-color:rgb(129, 179, 222); /* Change the color of the dot as needed */
+  border-radius: 50%;
+}
+@media (max-width: 768px){
+.container .display-nothing{
+display: none;
+}
+}
+@media (max-width: 576px){
+  .container .display-nothing{
+  display: none;
+  }
+  }
+  @media (max-width: 768px){
+  .container .fixed-bottom-icons{
+width:100%;
+position: fixed;
+bottom: 0px;
+right:0px;
+display: flex;
+background: white;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+  }
+}
+@media (max-width: 576px){
+  .container .fixed-bottom-icons{
+width:100%;
+position: fixed;
+bottom: 0px;
+right:0px;
+display: flex;
+background: white;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+  }
+}
+
+@media (max-width: 576px){
+  .combine{
+    display:inline-flex;
+justify-content: flex-start;
+align-items:start;
+  }
 
 }
