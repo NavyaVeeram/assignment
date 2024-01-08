@@ -200,3 +200,13 @@ display: none;
     display: none;
   }
   }
+/* For Firefox */
+input[type="range"]::-moz-range-progress {
+  background: #4f28d1;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: #f3f3f3;
+  border: 1px solid #3498db;
+
+}
