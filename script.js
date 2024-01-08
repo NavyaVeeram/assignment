@@ -3,16 +3,18 @@ function updateValue() {
             var slider = document.getElementById("exampleRange");
             var output = document.getElementById("sliderValue");
             output.textContent = " " + slider.value + "%";}
- 
+          
  function updateValues() {
                 var slider = document.getElementById("exampleRanges");
                 var output = document.getElementById("sliderValues");
                 output.textContent = " " + slider.value + "%";}
+
+
 document.addEventListener("DOMContentLoaded", function() {
                       // Function to create responsive options
                       function createResponsiveOptions() {
                         return {
-                          cutout: '80%',
+                          cutout: '90%',
                           plugins: {
                             legend: {
                               display: false
@@ -45,7 +47,8 @@ document.addEventListener("DOMContentLoaded", function() {
                           labels: ['HTML', 'Remaining'],
                           datasets: [{
                             data: [95, 5],
-                            backgroundColor: ['rgba(255, 99, 132, 1)', 'rgba(255, 255, 255, 0)']
+                
+                           backgroundColor: ['rgba(255, 99, 132, 1)', 'rgba(255, 255, 255, 0)']
                           }]
                         },
                         options: createResponsiveOptions()
@@ -71,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
                           labels: ['Bootstrap', 'Remaining'],
                           datasets: [{
                             data: [65, 35],
+          
                             backgroundColor: ['rgba(54, 162, 235, 1)', 'rgba(255, 255, 255, 0)']
                           }]
                         },
