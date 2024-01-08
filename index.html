@@ -10,7 +10,7 @@
 <script src="script2.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>internshala</title>
+    <title>assignment by RapidQuest</title>
    
 </head>
 <body>
@@ -19,63 +19,59 @@
     <div class=" col-sm-1 text-center d-flex flex-column justify-content-between icons pt-3">
        <div class="container"> 
         <div class="col">
-          <div class="container  display-nothing">
-  <img src="butterfly.svg" width="30px" height="30px">
-<i class="bi bi-search"></i>
+          <div class="container">
+  <img src="butterfly.svg" width="40px" height="40px" class="display-nothing">
+
 </div>
 
-<div class="container  pt-5 combine">
-<i class="bi bi-home d-none d-md-block d-flex align-tems-center "></i>
-<i class="bi bi-house-heart d-none d-md-block d-flex align-tems-center "></i>
-<i class="bi bi-layout-text-sidebar-reverse d-none d-md-block d-flex align-tems-center "></i>
-<i class="bi bi-layout-text-window-reverse d-none d-md-block d-flex align-tems-center "></i>
-<i class="bi bi-person d-none d-md-block d-flex align-tems-center "></i>
-<div class="container">
-  <div class="row">
-    <i class="bi bi-home d-md-none "></i>
-<i class="bi bi-house-heart d-md-none "></i>
-<i class="bi bi-layout-text-sidebar-reverse d-md-none"></i>
-<i class="bi bi-layout-text-window-reverse d-md-none"></i>
-<i class="bi bi-person d-md-none"></i>
-  </div>
-</div>
+<div class="container fixed-bottom-icons">
+<i class="bi bi-home"></i>
+<i class="bi bi-house-heart  "></i>
+<i class="bi bi-layout-text-sidebar-reverse  "></i>
+<i class="bi bi-card-list"></i>
+<i class="bi bi-person"></i>
+<i class="bi bi-search"></i>
 </div></div></div>
 
-<div class="container display-nothing combine">
-<div class="col">
-  <i class="bi bi-bell-fill bell"></i>
-  <i class="bi bi-box-arrow-right"></i>
-</div>
+
+<div class="container bell">
+
+  <i class="bi bi-bell-fill "> <span class="notification-dot"></span></i>
+  <i class="bi bi-box-arrow-right display-nothing"></i>
+
 
   </div>
     </div>
 
     <div class="col-sm-3 greys">
-       
-            <div class="container p-3">
+      <div class="container p-3">
         <div class="row">
-<div class="col">
-                    <img src="https://img.freepik.com/free-photo/graceful-long-haired-ginger-girl-looking-shoulder-laughing-pretty-woman-beret-enjoying-walk_197531-11739.jpg?size=626&ext=jpg&ga=GA1.2.939676640.1694439069&semt=sph" alt="Profile Image" class="profile-image">
+<div class="col-md-4">
+                    <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?size=626&ext=jpg&ga=GA1.2.939676640.1694439069&semt=sph" alt="Profile Image" class="profile-image">
                   </div>
-                  <div class="col">
-                    <h6>Hi Mike,</h6>
+                  
+                  <div class="col-md-5">
+                    <h6 class="pt-3">Hi Mike,</h6>
                     <p>Welcome back</p>
               </div>
+              <div class="col-md-3"></div>
             </div>
+ 
               <div class="container greys">
     <div class="row">
-             <p><b>Today</b></p>
+             <p style="color: black;"><b>Today</b></p>
              <h5><b>$19,892</b></h5>
              <p>Account balance</p>
             </div>
             <div class="combine">
+              <div>
              <h6><b>$4,000</b></h6>
              <p>year to year contributions</p>
-
             </div>
-            <div class="combine">
+            <div>
              <h6><b>$1,892</b></h6>
              <p>Total interest</p>
+            </div>
              </div>
              <button class="btn">I want to &#9662;
        </button>
@@ -152,9 +148,10 @@
               // setup 
               const data = {
                 labels: ['20','','25','','30','','35','','40','','45','','50'],
-                // labely:['0$','','100$','','$200','$300'],
+                
                 datasets: [{
                   label: 'Employer: K 73,500',
+                  
                   data: [2, 4, 6,8,10,12,14, 16, 18, 20,22,24,26],
                   backgroundColor: [
                     '#09167a',
@@ -204,6 +201,17 @@
                   y: {
                      beginAtZero:true,
                       stacked:true,
+                      ticks: {
+                    callback: function (value, index, values) {
+                        if (index % 2 === 0) {
+                            return ''; // Skip every other label
+                        }
+                        else {
+                            return '$' + (index * 100); // Assuming your values are in hundreds
+                        }
+                    }
+                  
+                  }
                     }
                   },
                   barThickness:'14',
@@ -296,7 +304,7 @@
                 <input type="range" class="form-range" id="exampleRange" min="0" max="100" oninput="updateValue()"> 
                 </div>
                    <div class="col-sm-2">
-              <span id="sliderValue"> 0%</span>
+              <span id="sliderValue"> 50%</span>
               </div>
             </div>
   
@@ -305,7 +313,7 @@
             <div class="col-sm-10">
             <input type="range" class="form-range" id="exampleRanges" min="0" max="100" oninput="updateValues()"></div>
             <div class="col-sm-2">
-            <span id="sliderValues"> 0%</span>
+            <span id="sliderValues"> 65</span>
             <hr>
             </div>
             <hr class="container">
@@ -318,7 +326,7 @@
                 <div class="col-3"><h6>5%</h6></div>
             </div>
             <div class="container text-center"><button class="btn btn-primary rounded w-100">update</button></div>
-            <h class="text-primary text-center"> view help docs &#707;</h>
+            <h class="text-primary text-center"> view help docs  <span class="bi bi-chevron-right"></span></h>
           </div>
         </div>
    <div class="container p-3">
@@ -326,7 +334,7 @@
         <div class="col-2"><hr class="custom-hr"></div>
         <div class="col-10"><p class="pt-3 " style="color: black;">Are u considering a <br><b>Housing advance?</b></p>
         <p>Limited time reduced interest</p>
-    <a href="" style="text-decoration: none;">Learn more &raquo;</a></div>
+    <a href="" style="text-decoration: none;">Learn more <span class="bi bi-chevron-right"></span></a></div>
     </div>
    </div>
         </div>
